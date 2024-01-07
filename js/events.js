@@ -172,17 +172,8 @@ Fluid.events = {
 };
 
 (()=> {
-  function block() {
-    setInterval(()=> {
-      debugger;
-    }, 100);
-  }
-  try{
-    document.oncontextmenu = function() {
-      return false;
-    }
-    block();
-  }catch(err){
-
+  // 禁止右键
+  document.oncontextmenu = function() {
+    return false;
   }
 })();
