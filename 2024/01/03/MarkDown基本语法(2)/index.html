@@ -220,6 +220,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
+      <img src="/img/logo.png" srcset="/img/loading.gif" lazyload height="28" width="33">
       <strong>YoungMong</strong>
     </a>
 
@@ -498,7 +499,7 @@ ___
 &lt;https://youngmong.github.io&gt;
 &lt;test@qq.com&gt;
 </code></pre>
-<p><a href="https://youngmong.github.io/">https://youngmong.github.io</a><br><a href="mailto:&#116;&#101;&#x73;&#x74;&#64;&#113;&#x71;&#46;&#x63;&#111;&#109;">&#116;&#101;&#x73;&#x74;&#64;&#113;&#x71;&#46;&#x63;&#111;&#109;</a></p>
+<p><a href="https://youngmong.github.io/">https://youngmong.github.io</a><br><a href="mailto:&#x74;&#x65;&#115;&#116;&#64;&#x71;&#113;&#46;&#99;&#x6f;&#x6d;">&#x74;&#x65;&#115;&#116;&#64;&#x71;&#113;&#46;&#99;&#x6f;&#x6d;</a></p>
 <h3 id="带格式化的链接"><a href="#带格式化的链接" class="headerlink" title="带格式化的链接"></a>带格式化的链接</h3><h4 id="强调链接，在链接语法前后增加星号。"><a href="#强调链接，在链接语法前后增加星号。" class="headerlink" title="强调链接，在链接语法前后增加星号。"></a>强调链接，在链接语法前后增加星号。</h4><blockquote>
 <p>visit <strong><a href="https://youngmong.github.io/">https://youngmong.github.io</a></strong></p>
 </blockquote>
@@ -737,6 +738,39 @@ This **word** is bold. This &lt;em&gt;word&lt;/em&gt; is italic.
             </div>
 
             
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="twikoo"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/twikoo/1.6.8/twikoo.all.min.js', function() {
+        var options = Object.assign(
+          {"envId":"http://124.71.71.185:8080/","region":"ap-shanghai","path":"window.location.pathname"},
+          {
+            el: '#twikoo',
+            path: 'window.location.pathname',
+            onCommentLoaded: function() {
+              Fluid.utils.listenDOMLoaded(function() {
+                var imgSelector = '#twikoo .tk-content img:not(.tk-owo-emotion)';
+                Fluid.plugins.imageCaption(imgSelector);
+                Fluid.plugins.fancyBox(imgSelector);
+              });
+            }
+          }
+        )
+        twikoo.init(options)
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
           </article>
         </div>
       </div>
@@ -784,6 +818,21 @@ This **word** is bold. This &lt;em&gt;word&lt;/em&gt; is italic.
 
   
 
+
+
+  <script>
+  Fluid.utils.createScript('https://lib.baomitu.com/mermaid/8.14.0/mermaid.min.js', function() {
+    mermaid.initialize({"theme":"default"});
+
+    Fluid.utils.listenDOMLoaded(function() {
+      Fluid.events.registerRefreshCallback(function() {
+        if ('mermaid' in window) {
+          mermaid.init();
+        }
+      });
+    });
+  });
+</script>
 
 
 
